@@ -6,11 +6,10 @@
 
 Name:           %{nb_}-resolver
 Version:        %{nb_ver}
-Release:        1%{?dist}
+Release:        %mkrel 1
 Summary:        Resolver subproject of xml-commons patched for NetBeans
-Distribution:   %{nb_}-%{nb_ver}
 
-Group:          Text Processing/Markup/XML
+Group:          Development/Java
 License:        ASL 2.0
 URL:            http://xml.apache.org/commons/
 
