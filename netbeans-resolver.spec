@@ -22,7 +22,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
 
 BuildRequires:  jpackage-utils
-BuildRequires:  java-1.6.0-openjdk >= 1:1.6.0
+BuildRequires:  java-1.6.0 >= 1:1.6.0
 BuildRequires:  ant
 
 Requires:       jpackage-utils
