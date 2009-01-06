@@ -1,6 +1,6 @@
 %define nb_              netbeans
 %define nb_org           %{nb_}.org
-%define nb_ver           6.1
+%define nb_ver           6.5
 %define patched_resolver_ver 1.1
 %define patched_resolver xml-commons-resolver-%{patched_resolver_ver}
 
