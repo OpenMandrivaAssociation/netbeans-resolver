@@ -6,7 +6,7 @@
 
 Name:           %{nb_}-resolver
 Version:        %{nb_ver}
-Release:        %mkrel 1
+Release:        %mkrel 2
 Summary:        Resolver subproject of xml-commons patched for NetBeans
 
 Group:          Development/Java
