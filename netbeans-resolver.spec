@@ -3,7 +3,7 @@
 
 Name:    netbeans-resolver
 Version: 6.7.1
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: Resolver subproject of xml-commons patched for NetBeans
 
 Group:   Development/Java
