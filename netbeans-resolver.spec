@@ -3,30 +3,28 @@
 
 Name:    netbeans-resolver
 Version: 6.7.1
-Release: %mkrel 2
+Release: 4
 Summary: Resolver subproject of xml-commons patched for NetBeans
 
-Group:   Development/Java
+Group:   Development/Java 
 License: ASL 1.1
 URL:     http://xml.apache.org/commons/
 
-Source0: http://www.apache.org/dist/xml/commons/%{patched_resolver}.zip
+Source0: http://www.apache.org/dist/xml/commons/%{patched_resolver}.tar.gz
 
 # see http://hg.netbeans._org/main/file/721f72486327/o.apache.xml.resolver/external/readme.txt
 Patch0: %{name}-%{version}-nb.patch
 Patch1: %{name}-%{version}-resolver.patch
 
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
 
-BuildRequires: java-devel >= 1.6.0
+BuildRequires: java-devel >= 0:1.6.0
 BuildRequires: jpackage-utils
 BuildRequires: ant
 BuildRequires: dos2unix
-BuildRequires: java-rpmbuild >= 0:1.5.32
 
 Requires: jpackage-utils
-Requires: java >= 1.6.0
+Requires: java >= 0:1.6.0
 
 %description
 Resolver subproject of xml-commons, version %{patched_resolver_ver} with 
@@ -41,8 +39,8 @@ find . -name "*.jar" -exec rm -f {} \;
 %patch0 -p1 -b .sav
 %patch1 -p1 -b .sav
 
-dos2unix KEYS >x && mv x KEYS
-dos2unix LICENSE.resolver.txt >x && mv x LICENSE.resolver.txt
+#dos2unix -k KEYS
+#dos2unix -k LICENSE.resolver.txt
 
 %build
 %{ant} -f resolver.xml jar
@@ -61,4 +59,5 @@ dos2unix LICENSE.resolver.txt >x && mv x LICENSE.resolver.txt
 %defattr(-,root,root,-)
 %{_javadir}/*
 %doc LICENSE.resolver.txt KEYS
+
 
